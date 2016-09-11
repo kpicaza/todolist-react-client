@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+}
+
+.mdl-layout__content {
+    flex: 1 0 auto;
+}
+
+.active {
+    color: green;
+}
+
+.content-summary-item {
+    margin-bottom: 1.5em;
+}
+
+.page-buttons {
+    position: fixed;
+    bottom: 25px;
+    right: 0;
+    z-index: 99;
+}
+
+.summary-buttons {
+    text-align: right;
+    margin-top: -17px;
+    padding: 5px 0;
+}
+
+.floating-right {
+    text-align: right;
+}
+
+.small-icon{
+    margin: 0;
+    padding: 0;
+    width: 16px;
+    height: 16px;
+}
