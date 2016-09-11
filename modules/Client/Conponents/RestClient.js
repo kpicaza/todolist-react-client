@@ -1,11 +1,6 @@
 import localStorage from 'localStorage';
-import FormDataFactory from './FormDataFactory';
 
 export default class RestClient {
-
-    constructor() {
-        // this.factory = new FormDataFactory;
-    }
 
     /**
      * Make request to Rest Client.
@@ -32,16 +27,20 @@ export default class RestClient {
             config.headers.append('Authorization', 'Bearer ' + localStorage.getItem('token'));
         }
 
-
         config.headers.append('Content-Type', 'application/json');
         config.headers.append('Origin', '*');
 
-        console.log(config);
         return fetch(path, config);
     }
 
+    /**
+     *
+     * @param request
+     * @param successCallback
+     * @param errorCallback
+     * @param dataCallback
+     */
     getResponse(request, successCallback, errorCallback, dataCallback) {
-
         dataCallback = dataCallback || function () {};
 
         request

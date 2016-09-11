@@ -50,7 +50,6 @@ export default class TaskList extends React.Component {
             this.ok,
             this.error,
             this.process
-
         );
     }
 
@@ -85,7 +84,7 @@ export default class TaskList extends React.Component {
             console.log(task);
 
             tasks.push(
-                <TaskSummary path={this.state.path} key={key} task={task}/>
+                <TaskSummary path={this.state.path} key={key} task={task} onDelete={this.communicateParent}/>
             );
         }));
 
